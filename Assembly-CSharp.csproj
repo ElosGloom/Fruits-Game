@@ -45,11 +45,15 @@
     <Analyzer Include="D:\Unity\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\Fruits.cs" />
+     <Compile Include="Assets\Scripts\AppInitializer.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Settings" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\Materials" />
+     <Folder Include="Assets\Prefabs" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity\2022.3.14f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -671,11 +675,17 @@
      <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
      </Reference>
+     <Reference Include="FPS.Utils">
+     <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\FPS.Utils.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="FPS.Pool">
+     <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\FPS.Pool.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Editor">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
@@ -686,11 +696,26 @@
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="UniTask.TextMeshPro">
+     <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\UniTask.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ResourceManager">
+     <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline">
+     <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.DOTween">
+     <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\UniTask.DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.Addressables">
+     <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ShaderGraph.Editor">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
@@ -712,6 +737,9 @@
      </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.Linq">
+     <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\UniTask.Linq.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
@@ -737,6 +765,9 @@
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Addressables.Editor">
+     <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
      </Reference>
@@ -761,14 +792,23 @@
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
+     <Reference Include="UniTask">
+     <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\UniTask.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+     <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Editor">
      <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Addressables">
+     <HintPath>E:\unity_projects\Fruits Game\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
