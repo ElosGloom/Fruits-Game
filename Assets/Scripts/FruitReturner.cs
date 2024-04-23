@@ -4,9 +4,12 @@ public class NewBehaviourScript : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.GetComponent<Transform>())
+        var go = other.gameObject;
+        if (go.CompareTag("Fruit"))
         {
-            FPS.Pool.FluffyPool.Return(other.gameObject.GetComponent<Transform>());
+            other.rigidbody.velocity = new Vector3();
+            FPS.Pool.FluffyPool.Return(go.GetComponent<Transform>());
         }
+        
     }
 }
