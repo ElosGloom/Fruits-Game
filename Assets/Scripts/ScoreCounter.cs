@@ -4,7 +4,7 @@ using UnityEngine;
 public class ScoreCounter : MonoBehaviour
 {
     private int _score;
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI currentScoreText;
 
     private void Start()
     {
@@ -14,7 +14,7 @@ public class ScoreCounter : MonoBehaviour
 
    private void UpdateScoreText()
     {
-        scoreText.text = $"Score: {_score}";
+        currentScoreText.text = $"Score: {_score}";
     }
 
     public void AddScore(int points)
