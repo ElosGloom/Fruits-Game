@@ -720,7 +720,7 @@ Transform:
   m_GameObject: {fileID: 901820163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -12.57, z: 0}
+  m_LocalPosition: {x: 0, y: -7.12, z: 0}
   m_LocalScale: {x: 31.149, y: 1.5433209, z: 31.149}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1277,6 +1277,7 @@ GameObject:
   - component: {fileID: 1778107164}
   - component: {fileID: 1778107163}
   - component: {fileID: 1778107162}
+  - component: {fileID: 1778107165}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -1400,6 +1401,19 @@ RectTransform:
   m_AnchoredPosition: {x: 729, y: 395}
   m_SizeDelta: {x: 329.1123, y: 130.8738}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1778107165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778107161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4731d3263c5245a985265a915965d891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1778107162}
 --- !u!1 &1905597470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,11 +1425,11 @@ GameObject:
   - component: {fileID: 1905597471}
   - component: {fileID: 1905597474}
   - component: {fileID: 1905597473}
-  - component: {fileID: 1905597477}
-  - component: {fileID: 1905597476}
   - component: {fileID: 1905597478}
-  - component: {fileID: 1905597479}
   - component: {fileID: 1905597480}
+  - component: {fileID: 1905597479}
+  - component: {fileID: 1905597477}
+  - component: {fileID: 1905597481}
   m_Layer: 0
   m_Name: Basket
   m_TagString: Untagged
@@ -1432,7 +1446,7 @@ Transform:
   m_GameObject: {fileID: 1905597470}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.435, y: -3.767, z: -0.5}
+  m_LocalPosition: {x: 0.435, y: -3.43, z: -0.5}
   m_LocalScale: {x: 1.7224, y: 0.42070386, z: 1.7224}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1488,19 +1502,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905597470}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1905597476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905597470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4731d3263c5245a985265a915965d891, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scoreText: {fileID: 1778107162}
 --- !u!114 &1905597477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,6 +1576,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 0
+--- !u!114 &1905597481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905597470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2191ca22506642e1a7773f41c4c246de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 1778107165}
 --- !u!1 &2015685497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8135886326569738825, guid: 56fae09712773584fb63896d473a98ee,

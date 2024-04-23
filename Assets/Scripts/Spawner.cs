@@ -7,7 +7,6 @@ public class CoinSpawner : MonoBehaviour
 {
     [SerializeField] private float spawnRange;
     [SerializeField] private float spawnHeight;
-    
 
 
     private void Start()
@@ -21,28 +20,18 @@ public class CoinSpawner : MonoBehaviour
 
         float randomX = Random.Range(centerPosition.x - spawnRange, centerPosition.x + spawnRange);
         Vector2 randomPosition = new Vector2(randomX, spawnHeight);
-        
-        float randomRotatationX = Random.Range(0, 360);
+
+        float randomRotationX = Random.Range(0, 360);
         float randomY = Random.Range(0, 360);
         float randomZ = Random.Range(0, 360);
 
-        Quaternion randomRotation = Quaternion.Euler(randomRotatationX, randomY, randomZ);
+        Quaternion randomRotation = Quaternion.Euler(randomRotationX, randomY, randomZ);
 
-        var fruit = FluffyPool.Get<Transform>(GetRandomFruitKey());
+        var fruit = FluffyPool.Get<Transform>(new RandomFruit().GetRandomFruitKey());
         fruit.transform.position = randomPosition;
         fruit.transform.rotation = randomRotation;
     }
 
-    private string GetRandomFruitKey()
-    {
-        var values = Enum.GetValues(typeof(Fruits));
-        var random = Random.Range(0, values.Length);
-
-        Fruits randomFruit = (Fruits)values.GetValue(random);
-        string fruitKey = randomFruit.ToString();
-
-        return fruitKey;
-    }
 
     private void OnDrawGizmos()
     {

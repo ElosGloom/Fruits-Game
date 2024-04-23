@@ -1,21 +1,20 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class ScoreCounter : MonoBehaviour
 {
     private int _score;
-    [SerializeField] TextMeshProUGUI _scoreText;
+    [SerializeField] private TextMeshProUGUI scoreText;
 
-    void Start()
+    private void Start()
     {
         _score = 0;
         UpdateScoreText();
     }
 
-    void UpdateScoreText()
+   private void UpdateScoreText()
     {
-        _scoreText.text = $"Score: {_score}";
+        scoreText.text = $"Score: {_score}";
     }
 
     public void AddScore(int points)
@@ -24,11 +23,5 @@ public class ScoreCounter : MonoBehaviour
         UpdateScoreText();
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.GetComponent<Transform>())
-        {
-            AddScore(1);
-        }
-    }
+    
 }
