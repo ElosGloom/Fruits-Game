@@ -1,27 +1,27 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 
 public class ScoreCounter : MonoBehaviour
 {
-    private int _score;
+    
     [SerializeField] private TextMeshProUGUI currentScoreText;
 
-    private void Start()
+    private void Awake()
     {
-        _score = 0;
-        UpdateScoreText();
+        
+        ScoreHandler.OnCurrentScoreChangeEvent += UpdateScoreText;
     }
 
-   private void UpdateScoreText()
-    {
-        currentScoreText.text = $"Score: {_score}";
+   private void UpdateScoreText(int score)
+   {
+       currentScoreText.text = $"Score: {score}";
+        // ScoreHandler.UpdateScore(score);
     }
 
-    public void AddScore(int points)
-    {
-        _score += points;
-        UpdateScoreText();
-    }
 
-    
+   private void OnDestroy()
+   {
+       ScoreHandler.OnCurrentScoreChangeEvent -= UpdateScoreText;
+   }
 }

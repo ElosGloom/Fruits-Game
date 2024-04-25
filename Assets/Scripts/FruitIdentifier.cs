@@ -2,7 +2,7 @@
 
 public class FruitIdentifier: MonoBehaviour
 {
-    [SerializeField] private ScoreCounter score;
+    
     
     private void OnCollisionEnter(Collision other)
     {
@@ -10,7 +10,7 @@ public class FruitIdentifier: MonoBehaviour
         {
            var fruit =  other.gameObject.GetComponent<Fruit>();
            
-           score.AddScore(fruit.FruitValue);
+          ScoreHandler.AddScore(fruit.FruitValue);
         }
     }
 } 
