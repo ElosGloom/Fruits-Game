@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class FruitReturner : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other)
     {
@@ -10,6 +10,5 @@ public class NewBehaviourScript : MonoBehaviour
             other.rigidbody.velocity = new Vector3();
             FPS.Pool.FluffyPool.Return(go.GetComponent<Transform>());
         }
-        
     }
 }

@@ -11,13 +11,15 @@ public class ScoreHandler : MonoBehaviour
     public static int BestScore => _bestScore;
     public static int LastScore => _lastScore;
 
+    private void Awake()
+    {
+        _bestScore = PlayerPrefs.GetInt("BestScore");
+    }
 
     private void Start()
     {
-        _bestScore = _lastScore;
         _currentScore = 0;
         OnCurrentScoreChangeEvent?.Invoke(_currentScore);
-        
     }
 
     public static void UpdateScore()
@@ -43,5 +45,11 @@ public class ScoreHandler : MonoBehaviour
     {
         _currentScore += points;
         OnCurrentScoreChangeEvent?.Invoke(_currentScore);
+    }
+
+    private void OnDestroy()
+    {
+        PlayerPrefs.SetInt("BestScore", _bestScore);
+        PlayerPrefs.Save();
     }
 }

@@ -12,5 +12,5 @@ public class RandomFruit
         string fruitKey = randomFruit.ToString();
 
         return fruitKey;
-    }     
+    }
 }

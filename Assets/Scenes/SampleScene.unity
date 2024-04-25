@@ -728,50 +728,6 @@ MonoBehaviour:
   bestSore: {fileID: 1321754193}
   playButton: {fileID: 810484651}
   timer: {fileID: 196762727}
---- !u!1 &554102962
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 554102964}
-  - component: {fileID: 554102963}
-  m_Layer: 0
-  m_Name: SaveHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &554102963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554102962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d99b31f444c44be919da8f4f4e10cd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &554102964
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554102962}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 540, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &684954731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,8 +2048,9 @@ GameObject:
   - component: {fileID: 1778107163}
   - component: {fileID: 1778107162}
   - component: {fileID: 1778107165}
+  - component: {fileID: 1778107166}
   m_Layer: 5
-  m_Name: CurrentScore
+  m_Name: ScoreHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2228,6 +2185,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScoreText: {fileID: 1778107162}
+--- !u!114 &1778107166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778107161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114ed1bdfe5a4651a9fecf39ed97fc12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1905597470
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,7 +2371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2191ca22506642e1a7773f41c4c246de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 1778107165}
 --- !u!1 &2015685497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8135886326569738825, guid: 56fae09712773584fb63896d473a98ee,
@@ -2449,4 +2417,3 @@ SceneRoots:
   - {fileID: 1333975348}
   - {fileID: 1606499565}
   - {fileID: 1424404688}
-  - {fileID: 554102964}

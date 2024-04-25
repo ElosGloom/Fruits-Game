@@ -1,9 +1,8 @@
-using System;
 using FPS.Pool;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class CoinSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     [SerializeField] private float spawnRange;
     [SerializeField] private float spawnHeight;

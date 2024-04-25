@@ -2,10 +2,7 @@
 
 public class Fruit : MonoBehaviour
 {
-    // [SerializeField] private string fruitType;
-    [SerializeField] private int fruitValue;
+    [SerializeField] private int reward;
 
-    // public string FruitType => fruitType;
-
-    public int FruitValue => fruitValue;
+    public int Reward => reward;
 }

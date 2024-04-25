@@ -175,6 +175,11 @@ PrefabInstance:
       objectReference: {fileID: 3627296823646084709}
     - target: {fileID: 6962659065270163561, guid: d11f3ed34f6ad4c42b8bdeaa6e5dc8d5,
         type: 3}
+      propertyPath: reward
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962659065270163561, guid: d11f3ed34f6ad4c42b8bdeaa6e5dc8d5,
+        type: 3}
       propertyPath: fruitType
       value: Apple
       objectReference: {fileID: 0}

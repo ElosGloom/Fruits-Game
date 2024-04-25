@@ -1,4 +1,3 @@
-using Game.Scripts.GUI;
 using UnityEngine;
 
 public class MovementController : MonoBehaviour

@@ -1,5 +1,4 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class Timer : MonoBehaviour
@@ -9,23 +8,22 @@ public class Timer : MonoBehaviour
     [SerializeField] private ScoreWindow scoreWindow;
 
     private float _currentTime;
-    private float _cashedTime;
 
     private void Start()
     {
-        _cashedTime = targetTime;
+        _currentTime = targetTime;
     }
 
     private void Update()
     {
-        _currentTime = targetTime -= Time.deltaTime;
+        _currentTime -= Time.deltaTime;
 
         string minutes = ((int)_currentTime / 60).ToString();
         string seconds = (_currentTime % 60).ToString("00");
 
         timerText.text = minutes + ":" + seconds;
 
-        if (targetTime <= 0.0f)
+        if (_currentTime <= 0.0f)
         {
             Time.timeScale = 0;
             TimerEnded();
@@ -38,13 +36,12 @@ public class Timer : MonoBehaviour
         ScoreHandler.UpdateScore();
         ScoreHandler.SetBestScore();
         scoreWindow.SetScore();
-        SaveHandler.SavePrefs();
     }
 
     public void RestartTimer()
     {
         Time.timeScale = 1;
-        targetTime = _cashedTime;
+        _currentTime = targetTime;
         scoreWindow.gameObject.SetActive(false);
         ScoreHandler.ResetScore();
     }
